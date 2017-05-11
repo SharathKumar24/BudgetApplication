@@ -1,0 +1,67 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Budget Application</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="/assets/budget-list.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="assets/styles.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> </head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <div class="my-app"> Budget Application </div>
+        <div class="my-name"> - By Sharath Kumar </div>
+    </div>
+
+    <form>
+      <div class="row form-group">
+        <div class="col-lg-2 col-form-label">
+          <label for="description">Description: </label>
+        </div>
+        <div class="col-lg-10 col-form-label">
+          <input type="text" class="form-control" id="description" placeholder="Enter the description" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <div class="col-lg-2 col-form-label">
+          <label for="amount">Amount: </label>
+        </div>
+        <div class="col-lg-10 col-form-label">
+          <input type="text" class="form-control" id="amount" placeholder="Enter the amount" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-10">
+          <button type="submit" class="btn text-center btn-primary">Submit</button>
+        </div>
+      </div>
+      <br />
+    </form>
+    <h3>Click the DESCRIPTION to delete it. Simple!! :)</h3>
+    <br />
+    <ul>
+
+      <% var a =0;
+      for(var i=0;i<data.length;i++){
+      a += data[i].amount;
+      %>
+        <li class="inline1"><%= data[i].item %></li> <span class="inline1">  worth <%= data[i].amount %> dollars</span>
+        <br class="clearBoth" />
+        <% } %>
+    </ul>
+    <br />
+        <h4> Total Amount Spent : <%= a %></h4>
+    </div>
+</body>
+
+</html>
