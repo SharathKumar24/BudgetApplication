@@ -4,7 +4,9 @@
   "description": "A small cute budget app",
   "main": "app.js",
   "scripts": {
-    "test": "node app.js"
+    "test": "node app.js",
+    "start": "node app.js",
+    "deploy": "gcloud preview app deploy"
   },
   "keywords": [
     "budget",
