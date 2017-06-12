@@ -14,6 +14,14 @@ var urlencodedParser = bodyParser.urlencoded({extended: false});
 
 module.exports = function(app){
 
+
+    app.get('/', function(req, res){
+      budget.find({}, function(err, data){
+        if(err) throw err;
+        res.render('index', {data: data});
+      });
+    });
+
   app.get('/budget', function(req, res){
     budget.find({}, function(err, data){
       if(err) throw err;
